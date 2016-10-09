@@ -1,4 +1,6 @@
 #! /bin.sh
+#处理空格作为参数问题： http://www.cnblogs.com/cocowool/archive/2013/01/15/2861904.html
+#修改文件创建时间： http://blog.sina.com.cn/s/blog_6c9d65a10100msfy.html
 
 # 指定路径的图片转化为webp格式，使用前判断是否是文件！
 function webpf() {
@@ -27,7 +29,7 @@ function webpf() {
      # safename="$(echo $input | sed 's# #\\ #g')"
      # 作为参数的时候，带上双引号，这样可以传递有空格的参数！
      cwebp -q $q -quiet -metadata "all" -mt "$input" -o "$output";
-     # echo $(stat "$input");
+     touch -r "$input" "$output"
      echo "$output";
   else
      cwebp -quiet -metadata "all" -mt "$input" -o "$output";
@@ -35,7 +37,7 @@ function webpf() {
 }
 
 function doconvert() {
-  input="$1"; #http://www.cnblogs.com/cocowool/archive/2013/01/15/2861904.html
+  input="$1";
   # input="$(echo "$1" | sed s'/_-_/ /g')"
   q=$2;
 
