@@ -31,7 +31,7 @@
 
 `如何在 mac 上预览？`
 
-众所周知，mac 上的空格键被称之为万能键，几乎所有文档都可以快速预览，很遗憾苹果还没支持 Webp，所有我就找了一个 quicklook 的插件来解决，我的仓库里已经包含了我编译好的插件，可以直接拿来用，也可以去下载 [Dmitry Chestnykh](https://github.com/dchest/webp-quicklook) 的源代码自行编译生成 **WebP.qlgenerator** 文件，将她拖到 ** ~/Library/QuickLook** 文件夹里就好了；
+众所周知，mac 上的空格键被称之为万能键，几乎所有文档都可以快速预览，很遗憾苹果还没支持 Webp，所有我就找了一个 quicklook 的插件来解决，我的仓库里已经包含了我编译好的插件，可以直接拿来用，也可以去下载 [Dmitry Chestnykh](https://github.com/dchest/webp-quicklook) 的源代码自行编译生成 **WebP.qlgenerator** 文件，将她拖到 **~/Library/QuickLook** 文件夹里就好了；
 
 使用该插件预览时图片偏白，日后我会优化下；
 
